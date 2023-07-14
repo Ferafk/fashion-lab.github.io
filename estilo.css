@@ -1,0 +1,98 @@
+.Contenedor{
+
+    display: flex;
+    justify-content: left;
+    margin-top: 50px;
+
+}
+
+.imagen{
+    width: 500px; 
+    margin-left: 40px;
+    margin-top: 17px;
+
+}
+
+.txt{
+    margin-left: 30px;
+
+}
+
+
+.Tienda-prod{
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+
+.Preciotienda{
+    margin-left: 500px;
+    margin-top: -50px;
+
+}
+
+.Online{
+    margin-top: 60px;
+    margin-left: 50px;
+
+}
+
+
+.Precioonline{
+    margin-left: 500px;
+    margin-top: -50px;
+
+}
+
+.Descuento{
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+
+
+.Preciodescuento{
+    margin-left: 490px;
+    margin-top: -70px;
+    background-color: lightcoral;
+    padding: 1px 10px;
+    margin-right: 200px;
+
+}
+
+.hr1{
+    margin-top: 40px;
+
+}
+
+
+.Tallas{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.tallas2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tallas2 div{
+    margin: 10px;
+}
+
+
+.agregar{
+width: 50px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+background-color: darkorange;
+border-radius: 10px;
+padding: 15px 30px;
+color: white;
+margin: 250px;
+}
+
+.Carrito{
+    margin-top: 60px;
+}

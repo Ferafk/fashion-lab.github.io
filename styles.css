@@ -1,0 +1,586 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.fa-star{
+    color: gold;
+}
+
+/*                     Header                      */
+
+#barra{
+    width: 100%;
+    color: white;
+    background-color: #777;
+    padding: 5px 100px 5px 30px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.marcas a{
+    color: white;
+    padding: 10px;
+    margin: auto;
+    font-weight: bold;
+}
+.marcas a:hover{
+    color: #aaa;
+}
+
+#sombra{
+    visibility: hidden;
+    position: fixed;
+    background-color: rgb(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+}
+#sombra.active2{
+    opacity: 1;
+    visibility: visible;
+}
+.somb-btn{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/*                     Sidebar                      */
+
+#sidebar{
+    position: fixed;
+    right: -500px;
+    height: 100%;
+    width: 500px;
+    background-color: white;
+    z-index: 999;
+    transition: all 350ms linear;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#sidebar.active{
+    right: 0px;
+}
+.btn-side{
+    color: black;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.car-dot{
+    flex: 1 1 10%;
+    text-align: center;
+    margin: auto;
+}
+.carrito{
+    flex: 1 1 90%;
+    background-color: blue;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.tarj{
+    flex: 1 0 auto;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: auto;
+}
+#card-1{
+    background-color: #fff;
+}
+#card-2{
+    background-color: #eee;
+}
+#card-3{
+    background-color: #fff;
+}
+#card-4{
+    background-color: #eee;
+}
+#card-5{
+    background-color: #fff;
+}
+
+.compra{
+    position: absolute;
+    font-size: 1.5em;
+    padding: 10px 30px 10px 30px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    bottom: 10%;
+}
+
+/*                     Menu                      */
+
+.btn-menu{
+    display: none;
+    color: black;
+    font-size: 2em;
+    cursor: pointer;
+}
+#menu-resp{
+    text-align: center;
+    position: fixed;
+    right: -400px;
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    z-index: 998;
+    transition: all 350ms linear;
+}
+#menu-resp.active3{
+    right: 0px;
+}
+#menu-resp a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 400ms ease;
+}
+#menu-resp input{
+    margin-top: 20px;
+}
+#menu-resp button{
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+}
+#menu-resp a:hover{
+    border-bottom: 2px solid #aaa;
+    background-color: #ccc;
+}
+
+#navegacion{
+    position: fixed;
+    width: 100%;
+    padding: 5px 30px 5px 30px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 1.5s;
+    z-index: 998;
+}
+#navegacion.abajo{
+    top: 0;
+    background-color: #fff;
+}
+#navegacion a{
+    color: #000;
+}
+.logo{
+    font-size: 3em;
+}
+#menu1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#menu1 a{
+    padding: 10px 20px 7px 20px;
+    margin: auto;
+    font-weight: bold;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-bottom: 4px solid transparent;
+    transition: all .3s ease;
+    text-align: center;
+}
+#menu1 a:hover{
+    border-bottom: 4px solid gray;
+}
+
+.busqueda{
+    border: 0px;
+    border-radius: 15px;
+    padding: 7px;
+    margin: 10px;
+    background-color: #ddd;
+}
+
+/*                     Banner                        */
+
+#banner{
+    height: 70vh;
+    z-index: -1;
+}
+.carrusel{
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+.car-item{
+    height: 100%;
+    width: 100%;
+}
+#car-i-1{
+    background-color: #eee;
+}
+#car-i-2{
+    background-color: #ddd;
+}
+#car-i-3{
+    background-color: #ccc;
+}
+
+#banner-comun{
+    height: 50vh;
+    z-index: -1;
+    background-color: #eee;
+    background-image: url(images/banner1.jpg);
+}
+
+
+/*                     Main                        */
+
+main section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+main section h2{
+    margin-bottom: 20px;
+}
+main section p{
+    margin-bottom: 20px;
+}
+.relleno{
+    min-height: 30vh;
+}
+
+
+
+#sec1{
+    max-width: 1350px;
+    margin: auto;
+    text-align: center;
+    background-color: #ddd;
+}
+.car2-container{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 70%;
+}
+.carrusel2{
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+.car2-item{
+    height: 250px;
+    overflow: hidden;
+    width: 30%;
+    margin: 1.67%;
+    background-size: cover;
+}
+#car-ii-1{
+    background-image: url(images/Mujer.jpg);
+}
+#car-ii-2{
+    background-image: url(images/nino.jpg);
+}
+#car-ii-3{
+    background-image: url(images/hombre.jpg);
+}
+#car-ii-4{
+    background-image: url(images/zapatillas.jpg);
+}
+#car-ii-5{
+    background-image: url(images/gorra.jpg);
+}
+#car-ii-6{
+    background-image: url(images/gift.jpg);
+}
+.sec1-btn{
+    margin-top: 30px;
+    padding: 10px 30px 10px 30px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    bottom: 10%;
+    transition: all .3s ease;
+}
+.sec1-btn:hover{
+    background-color: #555;
+    color: white;
+}
+
+
+
+#sec1_2{
+    position: relative;
+    height: 300px;
+    margin: auto;
+    background-image: url(images/tienda3.jpg);
+    background-size: cover;
+    background-position: 30%;
+    background-attachment: fixed;
+}
+#sec1_2 .fog{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000055;
+}
+#sec1_2 h3{
+    color: #fff;
+    font-size: 2em;
+    z-index: 20;
+}
+#sec1_2 p{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    z-index: 20;
+    width: 60%;
+}
+
+
+
+#sec2{
+    max-width: 1350px;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+}
+.destacados{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dest-item{
+    flex: 1 1;
+    min-width: 200px;
+}
+.dest-item a{
+    color: #000;
+}
+.dest-item a img{
+    object-fit: cover;
+    background-color: #fff;
+    height: 250px;
+    width: 200px;
+}
+
+
+
+#sec3{
+    max-width: 1350px;
+    padding: 100px;
+    margin: auto;
+    text-align: center;
+    background-color: #ddd;
+}
+
+
+#sec3_2{
+    text-align: center;
+    background-color: #ddd;
+}
+
+
+
+#sec4{
+    background-color: #aaa;
+    padding: 30px;
+}
+.suscribete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.suscribete h2{
+    margin: 0;
+}
+.suscribete div input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.suscribete div span{
+    margin-bottom: 50px;
+}
+
+
+#sec5{
+    background-color: #eee;
+}
+#sec5 iframe{
+    width: 90%;
+}
+
+
+
+#sec6{
+    max-width: 1350px;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+}
+.tienda-catgs{
+    flex: 1 1 20%;
+}
+.btn-cat-tienda{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding: 5px;
+    padding-left: 30px;
+    background-color: #ddd;
+    text-decoration: none;
+    color: #191C26;
+}
+.btn-cat-tienda::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 1.5em;
+    transform: translateY(-50%);
+}
+.btn-cat-tienda ~ ul{
+    display: none;
+    width: 50%;
+    margin: auto;
+}
+.btn-cat-tienda.active4::before{
+    content: "-";
+}
+.btn-cat-tienda.active4 ~ ul{
+    display: block;
+}
+
+
+.tienda-prods{
+    flex: 1 1 80%;
+}
+.tienda{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tienda .dest-item{
+    flex: 1 1;
+    width: 200px;
+    padding: 10px;
+}
+
+
+/*                     Footer                      */
+
+#main-ft{
+    padding: 100px;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#main-ft ul{
+    list-style: none;
+}
+#main-ft a{
+    color: #333;
+}
+#main-ft i{
+    font-size: 2em;
+    margin: 10px;
+}
+#main-ft i:hover{
+    color: goldenrod;
+}
+
+#firma{
+    background-color: #555;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/*                     Responsive                  */
+
+@media screen and (max-width:900px)
+{
+    .marcas{
+        display: none;
+    }
+    #menu1{
+        display: none;
+    }
+    .btn-side{
+        display: none;
+    }
+    .btn-menu{
+        display: block;
+    }
+    .car2-item{
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    #main-ft{
+        text-align: center;
+        flex-direction: column;
+        padding: 50px;
+    }
+    #main-ft div{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:720px)
+{
+    .car2-item{
+        width: 90%;
+        margin: 5%;
+    }
+}
